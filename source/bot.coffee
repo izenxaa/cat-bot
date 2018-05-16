@@ -3,9 +3,6 @@
 
 client = new Discord.Client
 
-# prefixes
-prefix = ';'
-
 # level handling
 
 genUserLevel = (id, level, xp) ->
@@ -23,13 +20,14 @@ client.on 'ready', ->
   console.log "CatBot is now ready!"
 
 client.on 'message', (message) ->
-  if message.content == prefix + 'level'
+  if message.content == ';level'
     message.reply("This will be the level testing mechanism.")
-  else if message.content == prefix + 'admingenlevel'
+  else if message.content == ';admingenlevel'
     try
       genUserLevel message.author.id, 1, 0
+      message.send 'Successfully set up level.'
     catch error
-      console.log 'ERROR occured. Not able to write to JSON file.'
+      message.send 'ERROR occured. Not able to write to JSON file.'
 
 
 
