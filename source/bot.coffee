@@ -29,7 +29,4 @@ client.on 'message', (message) ->
     catch error
       message.send 'ERROR occured. Not able to write to JSON file.'
 
-
-
-
 client.login process.env.BOT_TOKEN
