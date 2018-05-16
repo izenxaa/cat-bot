@@ -1,0 +1,16 @@
+{
+  "name": "cat-bot",
+  "version": "1.0.0",
+  "description": "A simple Discord bot.",
+  "main": "coffee/bot.coffee",
+  "repository": "https://github.com/izenxaa/cat-bot",
+  "author": "izenxaa",
+  "license": "MIT",
+  "scripts": {
+    "start": "coffee source/bot.coffee"
+  },
+  "dependencies": {
+    "coffeescript": "^2.3.0",
+    "discord.js": "^11.3.2"
+  }
+}
